@@ -1,0 +1,650 @@
+{
+    "title": "FunTranslations",
+    "description": "Funtranslations API gives access to the full set of translations available at funtranslations.com so that you can integrate them in your workflow or an app. [Click here to get details and subscribe](http://funtranslations.com/api) . Here are the individual API links:\n\n  ## Morse code API ##\n  Morse code conversion API on the cloud. Translate to and from Morse Code.[Click here to subscribe](http://funtranslations.com/api/morse)\n  ## Braille API ##\n  Braille conversion API on the cloud. Translate to Braille and get Braille results suitable for many display types.[Click here to subscribe](http://funtranslations.com/api/braille)     \n  ## Starwars Translation API ##\n  Ever wonder how to talk like Yoda? Well, use our API and let your APP/webpage speak like Yoda too.[Click here to subscribe](http://funtranslations.com/api/yoda)  \n  \n  Sith Translator API. [Click here to subscribe](http://funtranslations.com/api/sith) \n  \n  Cheunh Translator API. [Click here to subscribe](http://funtranslations.com/api/cheunh) \n  \n  Huttese Translator API. [Click here to subscribe](http://funtranslations.com/api/huttese)\n  \n  Mandalorian Translator API. [Click here to subscribe](http://funtranslations.com/api/mandalorian)\n  \n  Gungan Translator API. [Click here to subscribe](http://funtranslations.com/api/gungan)\n  \n  ## Pirate Speak Translation API ##\n  Ahoy, matey. Let's get those land lubbers speak our tounge too! Our evergreen pirate speak tranlsator API.[Click here to subscribe](http://funtranslations.com/api/pirate) \n  ## Valley Speak Translation API ##\n  Our throwback Valspeak translations API.[Click here to subscribe](http://funtranslations.com/api/valspeak)    \n  ## Minion Speak Translation API ##\n  Our evil master following minion speak translations API.[Click here to subscribe](http://funtranslations.com/api/minion)     \n",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/funtranslations.com/2.3/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://api.funtranslations.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "X-Funtranslations-Api-Secret": {
+                "label": "X-Funtranslations-Api-Secret (X-Funtranslations-Api-Secret)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_translate_braille": {
+            "main": "./lib/actions/get_translate_braille.js",
+            "title": "Translate from English to Braille. This is what you use if you have a braille display. This API translates the English text into characters that a braille display understands and you can feed the translated text directly to the display.",
+            "description": "Translate from English to Braille. This is what you use if you have a braille display. This API translates the English text into characters that a braille display understands and you can feed the translated text directly to the display.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_braille.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_braille_dots": {
+            "main": "./lib/actions/get_translate_braille_dots.js",
+            "title": "Use this to see which dots are enabled for each Braille letters. This is highly educational (to see which dots are enabled) and can potentially drive a non braille display which works on individual dots.",
+            "description": "Use this to see which dots are enabled for each Braille letters. This is highly educational (to see which dots are enabled) and can potentially drive a non braille display which works on individual dots.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_braille_dots.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_braille_html": {
+            "main": "./lib/actions/get_translate_braille_html.js",
+            "title": "Translate from English to Braille Image characters. This is probably what you want to use if you are displaying braille in a browser.",
+            "description": "Translate from English to Braille Image characters. This is probably what you want to use if you are displaying braille in a browser.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_braille_html.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_braille_image": {
+            "main": "./lib/actions/get_translate_braille_image.js",
+            "title": "Translate from English to Braille image characters. This is probably what you want to use if you are displaying braille in a browser.",
+            "description": "Translate from English to Braille image characters. This is probably what you want to use if you are displaying braille in a browser.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_braille_image.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_braille_unicode": {
+            "main": "./lib/actions/get_translate_braille_unicode.js",
+            "title": "Translate from English to Braille Unicode characters.",
+            "description": "Translate from English to Braille Unicode characters.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_braille_unicode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_brooklyn": {
+            "main": "./lib/actions/get_translate_brooklyn.js",
+            "title": "Translate from English to Brooklyn Speak.",
+            "description": "Translate from English to Brooklyn Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_brooklyn.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_chef": {
+            "main": "./lib/actions/get_translate_chef.js",
+            "title": "Translate from English to Swedish Chef speak.",
+            "description": "Translate from English to Swedish Chef speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_chef.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_cheunh": {
+            "main": "./lib/actions/get_translate_cheunh.js",
+            "title": "Translate from English to Starwars cheunh.",
+            "description": "Translate from English to Starwars cheunh.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_cheunh.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_cockney": {
+            "main": "./lib/actions/get_translate_cockney.js",
+            "title": "Translate from English to Cockney Speak.",
+            "description": "Translate from English to Cockney Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_cockney.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_dolan": {
+            "main": "./lib/actions/get_translate_dolan.js",
+            "title": "Translate from English to Dolan Speak.",
+            "description": "Translate from English to Dolan Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_dolan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_dothraki": {
+            "main": "./lib/actions/get_translate_dothraki.js",
+            "title": "Translate from English to Dothraki.",
+            "description": "Translate from English to Dothraki.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_dothraki.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_ermahgerd": {
+            "main": "./lib/actions/get_translate_ermahgerd.js",
+            "title": "Translate from English to ERMAHGERD.",
+            "description": "Translate from English to ERMAHGERD.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_ermahgerd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_ferblatin": {
+            "main": "./lib/actions/get_translate_ferblatin.js",
+            "title": "Translate from English to Ferb Latin.",
+            "description": "Translate from English to Ferb Latin.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_ferblatin.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_fudd": {
+            "main": "./lib/actions/get_translate_fudd.js",
+            "title": "Translate from English to Fudd Speak.",
+            "description": "Translate from English to Fudd Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_fudd.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_gungan": {
+            "main": "./lib/actions/get_translate_gungan.js",
+            "title": "Translate from English to Starwars Gungan Language.",
+            "description": "Translate from English to Starwars Gungan Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_gungan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_huttese": {
+            "main": "./lib/actions/get_translate_huttese.js",
+            "title": "Translate from English to Starwars Huttese Language.",
+            "description": "Translate from English to Starwars Huttese Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_huttese.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_jive": {
+            "main": "./lib/actions/get_translate_jive.js",
+            "title": "Translate from normal English to Jive Speak.",
+            "description": "Translate from normal English to Jive Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_jive.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_klingon": {
+            "main": "./lib/actions/get_translate_klingon.js",
+            "title": "Translate from English to Startrek Klingon Language.",
+            "description": "Translate from English to Startrek Klingon Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_klingon.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_mandalorian": {
+            "main": "./lib/actions/get_translate_mandalorian.js",
+            "title": "Translate from English to Starwars Mandalorian Language.",
+            "description": "Translate from English to Starwars Mandalorian Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_mandalorian.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_minion": {
+            "main": "./lib/actions/get_translate_minion.js",
+            "title": "Translate from English to Minion Speak.",
+            "description": "Translate from English to Minion Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_minion.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_morse": {
+            "main": "./lib/actions/get_translate_morse.js",
+            "title": "Translate from English to morse code.",
+            "description": "Translate from English to morse code.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_morse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_morse_audio": {
+            "main": "./lib/actions/get_translate_morse_audio.js",
+            "title": "Translate from English to morse code and get the result as an audio file.",
+            "description": "Translate from English to morse code and get the result as an audio file.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_morse_audio.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_morse2english": {
+            "main": "./lib/actions/get_translate_morse2english.js",
+            "title": "Translate from Morse code to English.",
+            "description": "Translate from Morse code to English.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_morse2english.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_oldenglish": {
+            "main": "./lib/actions/get_translate_oldenglish.js",
+            "title": "Translate from English to Old English.",
+            "description": "Translate from English to Old English.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_oldenglish.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_piglatin": {
+            "main": "./lib/actions/get_translate_piglatin.js",
+            "title": "Translate from English to Pig Latin.",
+            "description": "Translate from English to Pig Latin.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_piglatin.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_pirate": {
+            "main": "./lib/actions/get_translate_pirate.js",
+            "title": "Translate from English to Pirate Speak.",
+            "description": "Translate from English to Pirate Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_pirate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_quneya": {
+            "main": "./lib/actions/get_translate_quneya.js",
+            "title": "Translate from English to Elvish Quenya Language.",
+            "description": "Translate from English to Elvish Quenya Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_quneya.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_shakespeare": {
+            "main": "./lib/actions/get_translate_shakespeare.js",
+            "title": "Translate from English to Shakespeare English.",
+            "description": "Translate from English to Shakespeare English.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_shakespeare.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_sindarin": {
+            "main": "./lib/actions/get_translate_sindarin.js",
+            "title": "Translate from English to Elvish Sindarin Language.",
+            "description": "Translate from English to Elvish Sindarin Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_sindarin.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_sith": {
+            "main": "./lib/actions/get_translate_sith.js",
+            "title": "Translate from English to Sith Speak.",
+            "description": "Translate from English to Sith Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_sith.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_uk2us": {
+            "main": "./lib/actions/get_translate_uk2us.js",
+            "title": "Translate from UK English to US English.",
+            "description": "Translate from UK English to US English.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_uk2us.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_us2uk": {
+            "main": "./lib/actions/get_translate_us2uk.js",
+            "title": "Translate from US English to UK English.",
+            "description": "Translate from US English to UK English.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_us2uk.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_valspeak": {
+            "main": "./lib/actions/get_translate_valspeak.js",
+            "title": "Translate from English to Valley Speak.",
+            "description": "Translate from English to Valley Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_valspeak.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_valyrian": {
+            "main": "./lib/actions/get_translate_valyrian.js",
+            "title": "Translate from English to Valyrian.",
+            "description": "Translate from English to Valyrian.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_valyrian.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_vulcan": {
+            "main": "./lib/actions/get_translate_vulcan.js",
+            "title": "Translate from English to Startrek Vulcan Language.",
+            "description": "Translate from English to Startrek Vulcan Language.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_vulcan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_translate_yoda": {
+            "main": "./lib/actions/get_translate_yoda.js",
+            "title": "Translate from English to Yoda Speak.",
+            "description": "Translate from English to Yoda Speak.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_translate_yoda.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

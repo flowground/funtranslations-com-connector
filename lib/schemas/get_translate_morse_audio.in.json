@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "text": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "speed": {
+            "required": true,
+            "type": "integer",
+            "format": "integer"
+        },
+        "tone": {
+            "required": true,
+            "type": "integer",
+            "format": "integer"
+        }
+    }
+}
